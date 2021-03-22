@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Fragmentic</string>
+    <string name="button">Нежно нажать</string>
+    <string name="title_home">Home</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_dictionary">Dictionary</string>
+    <string name="title_detail">Profile</string>
+    <string name="_0">0</string>
+</resources>

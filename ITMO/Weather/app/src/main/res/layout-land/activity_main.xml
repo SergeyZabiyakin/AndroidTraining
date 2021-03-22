@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="380dp"
+        android:layout_height="265dp"
+        android:src="@drawable/land"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioButton
+        android:id="@+id/themeLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/light_theme"
+        app:layout_constraintBottom_toBottomOf="@+id/temperature"
+        app:layout_constraintEnd_toStartOf="@id/temperature"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="@+id/temperature"
+         />
+
+    <TextView
+        android:id="@+id/temperature"
+        style="@style/temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="10°"
+        app:layout_constraintEnd_toStartOf="@+id/weather"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/weather"
+        style="@style/weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Rain"
+        app:layout_constraintBottom_toBottomOf="@+id/temperature"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/temperature"
+        app:layout_constraintTop_toTopOf="@+id/temperature" />
+
+    <RadioButton
+        android:id="@+id/themeDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dark_theme"
+        app:layout_constraintBottom_toBottomOf="@+id/temperature"
+        app:layout_constraintLeft_toRightOf="@+id/weather"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/temperature" />
+
+    <TextView
+        android:id="@+id/city"
+        style="@style/city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Saint-Petersburg"
+        app:layout_constraintEnd_toStartOf="@+id/themeDark"
+
+        app:layout_constraintStart_toEndOf="@+id/themeLight"
+        app:layout_constraintTop_toBottomOf="@+id/temperature" />
+
+    <TextView
+        android:id="@+id/text6"
+        style="@style/text2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="52"
+        app:layout_constraintEnd_toStartOf="@id/text7"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/text5"
+        app:layout_constraintTop_toBottomOf="@+id/city" />
+
+    <TextView
+        android:id="@+id/text7"
+        style="@style/text2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="89"
+        app:layout_constraintBottom_toBottomOf="@+id/text6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text6"
+        app:layout_constraintTop_toTopOf="@+id/text6"
+         />
+
+    <TextView
+        android:id="@+id/text5"
+        style="@style/text2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+
+        android:text="78"
+        app:layout_constraintBottom_toBottomOf="@+id/text6"
+        app:layout_constraintEnd_toStartOf="@+id/text6"
+        app:layout_constraintStart_toEndOf="@+id/image"
+        app:layout_constraintTop_toTopOf="@+id/text6" />
+
+    <TextView
+        android:id="@+id/wind_flow"
+        style="@style/text4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Wind flow"
+        app:drawableTopCompat="@drawable/windflow"
+        app:layout_constraintBottom_toBottomOf="@+id/preception"
+        app:layout_constraintEnd_toStartOf="@+id/preception"
+        app:layout_constraintStart_toStartOf="@+id/text5"
+        app:layout_constraintTop_toTopOf="@+id/preception"
+         />
+
+    <TextView
+        android:id="@+id/preception"
+        style="@style/text4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Preception"
+        app:drawableTopCompat="@drawable/preception"
+        app:layout_constraintEnd_toEndOf="@+id/text6"
+        app:layout_constraintStart_toStartOf="@+id/text6"
+        app:layout_constraintTop_toBottomOf="@+id/text6" />
+
+    <TextView
+        android:id="@+id/humidity"
+        style="@style/text4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Humidity"
+        app:drawableTopCompat="@drawable/humidity"
+        app:layout_constraintBottom_toBottomOf="@+id/preception"
+        app:layout_constraintLeft_toRightOf="@+id/preception"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/preception"
+        />
+    <TextView
+        android:id="@+id/day1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Monday"
+        android:textSize="16sp"
+        app:drawableTopCompat="@drawable/b"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/day2"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <TextView
+        android:id="@+id/day2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Wednesday"
+        android:textSize="16sp"
+        app:drawableTopCompat="@drawable/c"
+        app:layout_constraintBottom_toBottomOf="@+id/day1"
+        app:layout_constraintLeft_toRightOf="@+id/day1"
+        app:layout_constraintRight_toRightOf="@+id/day3"
+        app:layout_constraintTop_toTopOf="@+id/day1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/day3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Thursday"
+        android:textSize="16sp"
+        app:drawableTopCompat="@drawable/d"
+        app:layout_constraintBottom_toBottomOf="@+id/day1"
+        app:layout_constraintLeft_toRightOf="@+id/day2"
+        app:layout_constraintRight_toLeftOf="@+id/day4"
+        app:layout_constraintTop_toTopOf="@+id/day1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/day4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Friday"
+        android:textSize="16sp"
+        app:drawableTopCompat="@drawable/e"
+        app:layout_constraintBottom_toBottomOf="@+id/day1"
+        app:layout_constraintLeft_toRightOf="@+id/day3"
+        app:layout_constraintRight_toLeftOf="@id/day5"
+        app:layout_constraintTop_toTopOf="@+id/day1" />
+    <TextView
+        android:id="@+id/day5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Saturday"
+        android:textSize="16sp"
+        app:drawableTopCompat="@drawable/f"
+        app:layout_constraintBottom_toBottomOf="@+id/day1"
+        app:layout_constraintLeft_toRightOf="@+id/day4"
+        app:layout_constraintRight_toLeftOf="@id/day6"
+        app:layout_constraintTop_toTopOf="@+id/day1" />
+
+    <TextView
+        android:id="@+id/day6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Sunday"
+        android:textSize="16sp"
+        app:drawableTopCompat="@drawable/g"
+        app:layout_constraintBottom_toBottomOf="@+id/day1"
+        app:layout_constraintLeft_toRightOf="@+id/day5"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/day1"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_menu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:menu="@menu/bottom_for_menu"
+        android:background="@color/white"
+        app:itemIconSize="40dp"
+        />
+
+    <ImageView
+        android:id="@+id/likeImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/backround_circle"
+        android:elevation="3dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_action_like"
+        tools:ignore="ContentDescription" />
+
+    <ImageView
+        android:id="@+id/dislikeImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/backround_circle"
+        android:elevation="3dp"
+        android:padding="0dp"
+        android:src="@drawable/ic_action_dislike"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/buttonDislike"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/button_press"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="6dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_action_dislike"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonLightning"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/buttonLightning"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_press"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="6dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_action_big"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonLike"
+        app:layout_constraintStart_toEndOf="@id/buttonDislike" />
+
+    <ImageButton
+        android:id="@+id/buttonLike"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/button_press"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_action_like"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/buttonLightning" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottomCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="20dp">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/bottomImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/topCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="20dp">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/topImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.motion.widget.MotionLayout>

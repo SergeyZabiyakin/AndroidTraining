@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    app:startDestination="@+id/Home">
+
+    <fragment
+        android:id="@+id/Home"
+        android:name="com.example.fragmentic.fragments.Home"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_Home_to_new1"
+            app:destination="@id/new1" />
+    </fragment>
+    <fragment
+        android:id="@+id/new1"
+        android:name="com.example.fragmentic.fragments.New"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_new">
+        <argument
+            android:name="count"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_new1_to_new1"
+            app:destination="@id/new1" />
+    </fragment>
+</navigation>

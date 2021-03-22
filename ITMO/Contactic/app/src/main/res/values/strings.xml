@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Contactic</string>
+    <plurals name="contacts">
+        <item quantity="one">Найден %1$d контакт</item>
+        <item quantity="few">Найдено %1$d контакта</item>
+        <item quantity="other">Найдено %1$d контактов</item>
+    </plurals>
+</resources>

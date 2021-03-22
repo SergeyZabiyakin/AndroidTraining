@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="light_theme">light</string>
+    <string name="dark_theme">dark</string>
+</resources>

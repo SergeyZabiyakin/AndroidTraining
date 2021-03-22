@@ -1,0 +1,35 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">#E6957B5F</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="text4">
+        <item name="android:textColor">#CCCBCB</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="text2">
+        <item name="android:textColor">#E4E4E4</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="city">
+        <item name="android:textColor">#E6E6E6</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="temperature">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">50sp</item>
+    </style>
+
+    <style name="weather">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+</resources>
