@@ -1,4 +1,4 @@
-package com.sergey.androidarchitecturecomponents.repositories.db.posts
+package com.sergey.mvvm.repository.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
@@ -25,4 +25,13 @@ interface PostDAO {
 
     @Query("SELECT * FROM posts_data_table")
     fun getAll(): LiveData<List<Post>>
+
+    /*@Query("SELECT COUNT(*) FROM posts_data_table")
+    fun getDataCount(): LiveData<Int>*/
+
+    @Transaction
+    suspend fun refresh(posts: List<Post>) {
+        deleteAll()
+        insertAll(posts)
+    }
 }
