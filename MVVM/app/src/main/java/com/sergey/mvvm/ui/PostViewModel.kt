@@ -1,6 +1,7 @@
 package com.sergey.mvvm.ui
 
 import androidx.databinding.Bindable
+import androidx.databinding.Observable
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -8,9 +9,8 @@ import androidx.lifecycle.viewModelScope
 import com.sergey.mvvm.repository.PostRepository
 import com.sergey.mvvm.repository.db.Post
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 
-class PostViewModel(private val repository: PostRepository) : ViewModel() {
+class PostViewModel(private val repository: PostRepository) : ViewModel() , Observable {
 
     lateinit var posts: LiveData<List<Post>>
 
@@ -21,10 +21,10 @@ class PostViewModel(private val repository: PostRepository) : ViewModel() {
     }
 
     @Bindable
-    val saveOrUpdateEditText = MutableLiveData<String>()
+    val editTextData = MutableLiveData<String>()
 
     init {
-        saveOrUpdateEditText.value = "Save"
+        editTextData.value = "Save"
     }
 
     fun saveOrUpdate() {
@@ -45,6 +45,14 @@ class PostViewModel(private val repository: PostRepository) : ViewModel() {
 
     fun refresh() = viewModelScope.launch {
         repository.refresh()
+    }
+
+    override fun addOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
+
+    }
+
+    override fun removeOnPropertyChangedCallback(callback: Observable.OnPropertyChangedCallback?) {
+
     }
 
 }

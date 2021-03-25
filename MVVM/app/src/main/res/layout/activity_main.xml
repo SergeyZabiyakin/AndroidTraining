@@ -6,7 +6,7 @@
     
     <data>
         <variable
-            name="myViewModel"
+            name="postViewModel"
             type="com.sergey.mvvm.ui.PostViewModel" />
     </data>
 
@@ -88,7 +88,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/my_background"
                 android:inputType="text"
-                android:text="@={myViewModel.saveOrUpdateEditText}"
+                android:text="@={postViewModel.editTextData}"
                 android:padding="12dp"
                 android:singleLine="true" />
 
