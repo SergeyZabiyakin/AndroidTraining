@@ -5,8 +5,7 @@ import androidx.room.*
 
 @Dao
 interface PostDAO {
-   /* @Query("SELECT * FROM posts_data_table WHERE id = :id")
-    suspend fun getByIdPost(id: Long): Post*/
+
 
     @Insert
     suspend fun insert(post: Post)
@@ -25,6 +24,9 @@ interface PostDAO {
 
     @Query("SELECT * FROM posts_data_table")
     fun getAll(): LiveData<List<Post>>
+
+    /* @Query("SELECT * FROM posts_data_table WHERE id = :id")
+    suspend fun getByIdPost(id: Long): Post*/
 
     /*@Query("SELECT COUNT(*) FROM posts_data_table")
     fun getDataCount(): LiveData<Int>*/

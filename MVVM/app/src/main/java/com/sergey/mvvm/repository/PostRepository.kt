@@ -1,5 +1,6 @@
 package com.sergey.mvvm.repository
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import com.sergey.mvvm.repository.db.Post
 import com.sergey.mvvm.repository.db.PostDAO
@@ -9,18 +10,16 @@ class PostRepository(
     private val dao: PostDAO,
     private val postService: PostService
 ) {
-    /*val posts = dao.getAll()
-    val countPost = dao.getDataCount()*/
+    val posts = dao.getAll()
 
-    suspend fun getAll(): LiveData<List<Post>> {
-        val posts = dao.getAll()
+    suspend fun getAll() {
         if (posts.value.isNullOrEmpty()) {
             try {
                 dao.insertAll(postService.getAll())
+                Log.e("PostService" ,"getAll()")
             } catch (e: Exception) {
             }
         }
-        return posts
     }
 
     suspend fun insert(post: Post) {
@@ -51,6 +50,7 @@ class PostRepository(
     suspend fun refresh() {
         try {
             dao.refresh(postService.getAll())
+            Log.e("PostService" ,"getAll()")
         } catch (e: Exception) {
             dao.deleteAll()
         }

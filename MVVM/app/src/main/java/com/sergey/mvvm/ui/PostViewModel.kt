@@ -12,11 +12,11 @@ import kotlinx.coroutines.launch
 
 class PostViewModel(private val repository: PostRepository) : ViewModel() , Observable {
 
-    lateinit var posts: LiveData<List<Post>>
+    val posts = repository.posts
 
     init {
         viewModelScope.launch {
-           // posts = repository.getAll()
+           repository.getAll()
         }
     }
 
@@ -24,10 +24,10 @@ class PostViewModel(private val repository: PostRepository) : ViewModel() , Obse
     val editTextData = MutableLiveData<String>()
 
     init {
-        editTextData.value = "Save"
+        editTextData.value = "Insert"
     }
 
-    fun saveOrUpdate() {
+    fun insertOrUpdate() {
 
     }
 
