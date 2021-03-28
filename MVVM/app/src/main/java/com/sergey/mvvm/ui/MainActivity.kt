@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         val factory = PostViewModelFactory(App.repository)
         postViewModel = ViewModelProvider(this, factory).get(PostViewModel::class.java)
@@ -32,9 +33,9 @@ class MainActivity : AppCompatActivity() {
             binding.progressBar.visibility = View.VISIBLE
             postViewModel.refresh()
         }
+
         initRecyclerView()
     }
-
 
     private fun initRecyclerView() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
@@ -45,5 +46,4 @@ class MainActivity : AppCompatActivity() {
             adapter.setItems(it)
         })
     }
-
 }
