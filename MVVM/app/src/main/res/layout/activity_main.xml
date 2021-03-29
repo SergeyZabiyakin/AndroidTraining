@@ -7,7 +7,7 @@
     <data>
         <variable
             name="postViewModel"
-            type="com.sergey.mvvm.ui.PostViewModel" />
+            type="com.sergey.mvvm.model.PostViewModel" />
     </data>
 
     <androidx.constraintlayout.motion.widget.MotionLayout
@@ -24,7 +24,7 @@
             android:visibility="visible" />
 
         <ImageButton
-            android:id="@+id/buttonRefresh"
+            android:id="@+id/refresh"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:layout_marginStart="12dp"
@@ -48,7 +48,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/buttonUp"
+            android:id="@+id/showOrHideEditText"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:background="@null"
@@ -56,11 +56,11 @@
             android:focusable="true"
             android:scaleType="fitXY"
             android:src="@drawable/ic_action_up"
-            app:layout_constraintBottom_toTopOf="@id/itemAdd"
-            app:layout_constraintStart_toStartOf="@+id/itemAdd" />
+            app:layout_constraintBottom_toTopOf="@id/cardViewAction"
+            app:layout_constraintStart_toStartOf="@+id/cardViewAction" />
 
         <ImageButton
-            android:id="@+id/buttonSearch"
+            android:id="@+id/search"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginEnd="5dp"
@@ -74,7 +74,7 @@
             app:layout_constraintEnd_toEndOf="parent" />
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/itemAdd"
+            android:id="@+id/cardViewAction"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:clickable="true"
@@ -88,6 +88,7 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/my_background"
                 android:inputType="text"
+                android:hint="@{postViewModel.editTextHint}"
                 android:text="@={postViewModel.editTextData}"
                 android:padding="12dp"
                 android:singleLine="true" />

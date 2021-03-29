@@ -7,7 +7,7 @@
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
         motion:duration="600">
-        <OnClick motion:targetId="@+id/buttonUp" />
+        <OnClick motion:targetId="@+id/showOrHideEditText" />
 
     </Transition>
 
@@ -15,7 +15,7 @@
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
         motion:duration="600">
-        <OnClick motion:targetId="@+id/buttonSearch" />
+        <OnClick motion:targetId="@+id/search" />
 
     </Transition>
 
@@ -26,7 +26,7 @@
             android:layout_height="match_parent"
             motion:visibilityMode="ignore" />
 
-        <Constraint android:id="@id/itemAdd">
+        <Constraint android:id="@id/cardViewAction">
 
             <Layout
                 android:layout_width="match_parent"
@@ -37,7 +37,7 @@
 
         </Constraint>
 
-        <Constraint android:id="@id/buttonSearch">
+        <Constraint android:id="@id/search">
             <PropertySet android:alpha="1" />
         </Constraint>
 
@@ -46,7 +46,7 @@
     <ConstraintSet
         android:id="@+id/end"
         motion:deriveConstraintsFrom="@+id/start">
-        <Constraint android:id="@id/itemAdd">
+        <Constraint android:id="@id/cardViewAction">
 
             <Layout
                 android:layout_width="match_parent"
@@ -57,13 +57,13 @@
 
         </Constraint>
 
-        <Constraint android:id="@id/buttonUp">
+        <Constraint android:id="@id/showOrHideEditText">
 
             <Transform android:rotation="-180" />
 
         </Constraint>
 
-        <Constraint android:id="@id/buttonSearch">
+        <Constraint android:id="@id/search">
             <PropertySet android:alpha="0" />
         </Constraint>
 

@@ -22,6 +22,10 @@ class PostRepository(
         }
     }
 
+    suspend fun search(title: String): List<Post> {
+         return dao.searchByTitle(title)
+    }
+
     suspend fun insert(post: Post) {
         try {
             dao.insert(postService.insert(toMyPost(post)))

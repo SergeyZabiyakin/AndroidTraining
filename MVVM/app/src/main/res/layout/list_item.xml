@@ -31,7 +31,7 @@
                 android:textColor="@color/black" />
 
             <ImageButton
-                android:id="@+id/buttonCardView"
+                android:id="@+id/deleteItem"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="@null"

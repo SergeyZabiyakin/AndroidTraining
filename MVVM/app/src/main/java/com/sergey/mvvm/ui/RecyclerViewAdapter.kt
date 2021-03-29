@@ -32,9 +32,8 @@ class RecyclerViewAdapter(
         val holder = UserViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
         )
-        holder.view.findViewById<ImageButton>(R.id.buttonCardView).setOnClickListener {
+        holder.view.findViewById<ImageButton>(R.id.deleteItem).setOnClickListener {
             onClick(items[holder.adapterPosition])
-            //notifyItemChanged(holder.adapterPosition)
         }
         return holder
     }

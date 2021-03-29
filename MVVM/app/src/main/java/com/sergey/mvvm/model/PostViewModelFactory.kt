@@ -1,4 +1,4 @@
-package com.sergey.mvvm.ui
+package com.sergey.mvvm.model
 
 import android.util.Log
 import androidx.lifecycle.ViewModel

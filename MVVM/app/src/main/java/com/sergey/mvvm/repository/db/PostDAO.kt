@@ -2,6 +2,7 @@ package com.sergey.mvvm.repository.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import java.util.*
 
 @Dao
 interface PostDAO {
@@ -25,11 +26,11 @@ interface PostDAO {
     @Query("SELECT * FROM posts_data_table")
     fun getAll(): LiveData<List<Post>>
 
-    /* @Query("SELECT * FROM posts_data_table WHERE id = :id")
-    suspend fun getByIdPost(id: Long): Post*/
+    @Query("SELECT * FROM posts_data_table WHERE title LIKE :title")
+    suspend fun searchByTitle(title: String): List<Post>
 
-    /*@Query("SELECT COUNT(*) FROM posts_data_table")
-    fun getDataCount(): LiveData<Int>*/
+    @Query("SELECT COUNT(*) FROM posts_data_table")
+    fun getDataCount(): LiveData<Int>
 
     @Transaction
     suspend fun refresh(posts: List<Post>) {
