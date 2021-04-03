@@ -8,7 +8,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.sergey.mvvm.R
-import com.sergey.mvvm.repository.db.Post
+import com.sergey.mvvm.model.repository.db.Post
 import java.util.*
 
 

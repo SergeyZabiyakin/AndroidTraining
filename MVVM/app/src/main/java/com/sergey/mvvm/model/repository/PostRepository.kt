@@ -1,10 +1,9 @@
-package com.sergey.mvvm.repository
+package com.sergey.mvvm.model.repository
 
 import android.util.Log
-import androidx.lifecycle.LiveData
-import com.sergey.mvvm.repository.db.Post
-import com.sergey.mvvm.repository.db.PostDAO
-import com.sergey.mvvm.repository.network.PostService
+import com.sergey.mvvm.model.repository.db.Post
+import com.sergey.mvvm.model.repository.db.PostDAO
+import com.sergey.mvvm.model.repository.network.PostService
 
 class PostRepository(
     private val dao: PostDAO,

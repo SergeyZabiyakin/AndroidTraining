@@ -1,8 +1,7 @@
-package com.sergey.mvvm.repository.network
+package com.sergey.mvvm.model.repository.network
 
-import com.sergey.mvvm.repository.db.Post
+import com.sergey.mvvm.model.repository.db.Post
 import retrofit2.http.*
-import java.util.*
 
 interface PostService {
 

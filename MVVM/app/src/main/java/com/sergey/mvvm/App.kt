@@ -1,10 +1,10 @@
 package com.sergey.mvvm
 
 import android.app.Application
-import com.sergey.mvvm.repository.PostRepository
-import com.sergey.mvvm.repository.db.PostDatabase
-import com.sergey.mvvm.repository.network.PostRetrofit
-import com.sergey.mvvm.repository.network.PostService
+import com.sergey.mvvm.model.repository.PostRepository
+import com.sergey.mvvm.model.repository.db.PostDatabase
+import com.sergey.mvvm.model.repository.network.PostRetrofit
+import com.sergey.mvvm.model.repository.network.PostService
 
 
 class App : Application() {

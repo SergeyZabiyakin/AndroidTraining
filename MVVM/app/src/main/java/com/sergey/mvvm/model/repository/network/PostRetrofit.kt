@@ -1,4 +1,4 @@
-package com.sergey.mvvm.repository.network
+package com.sergey.mvvm.model.repository.network
 
 
 import retrofit2.Retrofit

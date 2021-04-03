@@ -1,8 +1,7 @@
-package com.sergey.mvvm.repository.db
+package com.sergey.mvvm.model.repository.db
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import java.util.*
 
 @Dao
 interface PostDAO {

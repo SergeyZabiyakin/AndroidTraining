@@ -5,9 +5,8 @@ import androidx.databinding.Observable
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.sergey.mvvm.repository.PostRepository
-import com.sergey.mvvm.repository.db.Post
-import kotlinx.coroutines.Job
+import com.sergey.mvvm.model.repository.PostRepository
+import com.sergey.mvvm.model.repository.db.Post
 import kotlinx.coroutines.launch
 
 class PostViewModel(private val repository: PostRepository) : ViewModel(), Observable {

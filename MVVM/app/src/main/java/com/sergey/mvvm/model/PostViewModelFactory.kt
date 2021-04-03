@@ -3,7 +3,7 @@ package com.sergey.mvvm.model
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.sergey.mvvm.repository.PostRepository
+import com.sergey.mvvm.model.repository.PostRepository
 
 class PostViewModelFactory(private val repository: PostRepository) : ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {

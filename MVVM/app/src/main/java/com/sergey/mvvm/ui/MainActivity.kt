@@ -6,9 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
-import android.view.inputmethod.EditorInfo
 import android.widget.EditText
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,7 +15,7 @@ import com.sergey.mvvm.R
 import com.sergey.mvvm.databinding.ActivityMainBinding
 import com.sergey.mvvm.model.PostViewModel
 import com.sergey.mvvm.model.PostViewModelFactory
-import com.sergey.mvvm.repository.db.Post
+import com.sergey.mvvm.model.repository.db.Post
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding

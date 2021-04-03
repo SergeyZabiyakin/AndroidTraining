@@ -1,4 +1,4 @@
-package com.sergey.mvvm.repository.network
+package com.sergey.mvvm.model.repository.network
 
 data class MyPost(
     val userId: Int,

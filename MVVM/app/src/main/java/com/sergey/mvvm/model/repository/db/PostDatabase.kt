@@ -1,4 +1,4 @@
-package com.sergey.mvvm.repository.db
+package com.sergey.mvvm.model.repository.db
 
 import android.content.Context
 import androidx.room.Database
