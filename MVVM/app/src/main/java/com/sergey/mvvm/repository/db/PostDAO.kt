@@ -30,7 +30,7 @@ interface PostDAO {
     suspend fun searchByTitle(title: String): List<Post>
 
     @Query("SELECT COUNT(*) FROM posts_data_table")
-    fun getDataCount(): LiveData<Int>
+    suspend fun getDataCount(): Int
 
     @Transaction
     suspend fun refresh(posts: List<Post>) {

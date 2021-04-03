@@ -9,9 +9,7 @@ import com.sergey.mvvm.repository.network.PostService
 
 class App : Application() {
 
-    companion object {
-        lateinit var repository: PostRepository
-    }
+    lateinit var repository: PostRepository
 
     override fun onCreate() {
         super.onCreate()

@@ -13,24 +13,27 @@ class PostRepository(
     val posts = dao.getAll()
 
     suspend fun getAll() {
-        if (posts.value.isNullOrEmpty()) {
+        val count = dao.getDataCount()
+        Log.e("PostRepository", "dao.getDataCount() = $count")
+        if (count == 0) {
             try {
                 dao.insertAll(postService.getAll())
-                Log.e("PostService" ,"getAll()")
+                Log.e("PostService", "getAll()")
             } catch (e: Exception) {
             }
         }
     }
 
     suspend fun search(title: String): List<Post> {
-         return dao.searchByTitle(title)
+        return dao.searchByTitle(title)
     }
 
     suspend fun insert(post: Post) {
         try {
-            dao.insert(postService.insert(toMyPost(post)))
-        } catch (e: Exception) {
             dao.insert(post)
+            postService.insert(toMyPost(post))
+        } catch (e: Exception) {
+            //dao.insert(post)
         }
     }
 
@@ -54,7 +57,7 @@ class PostRepository(
     suspend fun refresh() {
         try {
             dao.refresh(postService.getAll())
-            Log.e("PostService" ,"getAll()")
+            Log.e("PostService", "getAll()")
         } catch (e: Exception) {
             dao.deleteAll()
         }
